@@ -1,2 +1,19 @@
 # index.html
-Caino e babel
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test Crash PushState</title>
+</head>
+<body>
+  <h1>Clicca il pulsante per avviare il test</h1>
+  <button onclick="avviaTest()">Avvia Test</button>
+
+  <script>
+    function avviaTest() {
+      for (let i = 0; i < 1000000; i++) {
+        history.pushState(i, null, "/" + i);
+      }
+    }
+  </script>
+</body>
+</html>
